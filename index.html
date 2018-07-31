@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-	<meta name="viewport" content="width=device-width">
-	
+<html><head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>UI Pattern Library - GVSU University Libraries</title>
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond|Lato:400,700">
+	<link type="text/css" rel="stylesheet" href="https://prod.library.gvsu.edu/libs/fontawesome/fontawesome-all.min.css">
+	<link type="text/css" rel="stylesheet" href="https://gvsu.edu/cms4/skeleton//1/files/css/styles.css">
+	<link type="text/css" rel="stylesheet" href="https://gvsu.edu/library/files/css/base.css">
+	<script src="https://gvsu.edu/cms4/skeleton/1/files/js/cms4.1.min.js"></script>
+	<script src="https://prod.library.gvsu.edu/labs/template_hours/hours.js"></script>
 	
 	<style>
 	
 	/* Testing only styles */
 	
 	body {font-family: Arial, Helvetica, sans-serif;color: #363636;font-size:100%;}
-
-	.monospace{font-family:courier,monospace;font-size:.8em}
+	.accordion-head { margin-bottom: 1em; }
+	.monospace{font-family:courier,monospace;font-size:1.2em;background: #222222; color: #fff; padding: .5em;white-space: pre-wrap;}
 	p.demogrid{margin-bottom:0 !important;}
 	.colorblock{padding: 1em 0;margin: .25em 5%;text-align:center;width: 90%; }
 
-	.grey{background-color:#eee;padding:inherit;}
-	.blue{background-color:#069;color:#fff;padding:inherit;}
-	
-	.clear { clear: both;}
+	.grey{background-color:#cecdcd;padding:inherit;}
+	.blue{background-color:#0065a4;color:#fff;padding:inherit;}
+	.row.row-gutter div { margin-top: 1em; }
 	a {color: #1F65A0;}
 
 	@media screen and (min-width: 900px) {
@@ -31,96 +37,202 @@
 
 
 	</style>
-	
-	<link rel="stylesheet" type="text/css" href="css/libui.css">
-
 </head>
 
 <body>
-	
-	<div class="line">
-		<div class="span1 unit">
+
+	<div role="banner">
+			<a href="#main" class="focus-inverted">Skip to main content</a>
+			
+			
+			<div class="header">
+				<div class="row content">
+					<div class="col-5 col-sm-12 logo">
+						<div class="col-12 col-sm-9">
+							<h1>
+								<a href="https://www.gvsu.edu">
+									<!--[if lte IE 8|!IE]>
+										<img src="/homepage/files/img/gvsu_logo_white.png" alt="Grand Valley State University Logo" />
+									<![endif]-->
+									<!--[if gte IE 9|!IE]><!-->
+										<img src="https://gvsu.edu/homepage/files/img/gvsu_logo_white.svg" alt="Grand Valley State University Logo" onerror="this.onerror=null;this.src='https://gvsu.edu/homepage/files/img/gvsu_logo_white.png'">
+									<!--<![endif]-->
+									<span id="gv-logo-label" class="sr-only" aria-hidden="true">Grand Valley State University</span>
+								</a>
+							</h1>
+						</div>
+						<div class="hide-lg hide-md col-sm-3">
+							<a id="gv-hamburger" role="button" tabindex="0" aria-label="Menu" aria-controls="cms-navigation-mobile">
+								<img src="https://prod.library.gvsu.edu/labs/cms4.1_files/menu.png" alt="" style="width:auto;min-width:auto;" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col-7 col-sm-12 quick hide-print hide-sm">
+						
+					</div>
+				</div>
+			</div>
+			<div class="site">
+				<div class="row content">
+					<div class="col-8 col-sm-12">
+						<h1 class="h2 serif padding-none">
+							<a href="https://gvsu.edu/library">
+								University Libraries
+							</a>
+						</h1>
+						<h2 class="sr-only">Search</h2>
+						<form action="https://gvsu.summon.serialssolutions.com/search" class="library-search" role="search">
+							<input name="spellcheck" value="true" type="hidden">
+							<p>
+								<label for="s.q" class="sr-only">
+									Search the Library for Articles, Books, and More
+								</label>
+								<input id="s.q" name="s.q" placeholder="Find articles, books, &amp; more" size="45" type="text"><button type="submit">Find It!</button>
+							</p>
+						</form>
+						<div class="library-nav">
+							<h3>More research tools:</h3>
+							<ul>
+								<li>
+									<a href="https://libguides.gvsu.edu/az.php">Databases</a>
+								</li>
+								<li>
+									<a href="https://gvsu.edu/library/findbooks">Books</a>
+								</li>
+								<li>
+									<a href="https://gvsu.edu/library/findjournals">Journals</a>
+								</li>
+								<li>
+									<a href="https://libguides.gvsu.edu/">Subject Guides</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 col-sm-12 library-hours">
+							
+					</div>
+				</div>
+			</div>
+			
+				<div id="cms-navigation" class="navigation hide-sm hide-print">
+					<div class="content">
+						<div role="navigation">
+	<ul role="menubar">
 		
-			<h2><abbr title="User Interface">UI</abbr> Pattern Library</h2>
+					<li>
+						<a href="https://gvsu.edu/library/find-materials-2.htm" target="_self">
+							Find Materials
+						</a>
+					</li>
+				
+					<li>
+						<a href="https://gvsu.edu/library/services-4.htm" target="_self">
+							Services
+						</a>
+					</li>
+				
+					<li>
+						<a href="https://gvsu.edu/library/about-the-university-libraries-3.htm" target="_self">
+							About Us
+						</a>
+					</li>
+				
+					<li>
+						<a href="https://help.library.gvsu.edu" target="_self">
+							Help
+						</a>
+					</li>
+				
+					<li>
+						<a href="https://www.gvsu.edu/library/myaccount" target="_self">
+							My Account
+						</a>
+					</li>
+				
+	</ul>
+</div>
+					</div>
+				</div>
+			
+		</div>
+
+
+
+
+<div role="main" id="main">
+	<div class="content">
+		
+			<div id="cms-content">
+	
+	<div class="row row-gutter">
+		<div class="col-12">
+		
+			<h1 class="padding-none h2"><abbr title="User Interface">UI</abbr> Pattern Library</h1>
 		
 			<div class="lib-horizontal-list">
-				<ul>
+				<ul class="list-inline">
 					<li><b>Show me:</b></li>
 					<li><a href="#lib-colors">Colors</a></li>
 					<li><a href="#lib-grid">Grid Units</a></li>
 					<li><a href="#lib-typography">Typography</a></li>
 					<li><a href="#lib-forms">Forms</a></li>
 					<li><a href="#lib-buttons">Buttons</a></li>
-					<li><a href="#lib-navigation-elements">Navigation</a></li>
-					<li><a href="#lib-tables">Tables</a></li>
-					<li><a href="#lib-icons">Icons</a></li>
 					<li><a href="#lib-status-messages">Status Messages</a></li>
 					<!--li><a href="#lib-voice-tone">Copy Examples</a></li>
 					<li><a href="#lib-microcopy">Microcopy Examples</a></li-->
 				</ul>
 			</div><!-- End .lib-horizontal-list -->
-		</div><!-- End span1 .unit -->
-	</div><!-- End .line -->
+		</div><!-- End .col-12 -->
+	</div><!-- End .row -->
 
-	<div class="line" id="lib-basics">
+	<div class="row row-gutter" id="lib-basics">
 		<div class="span1 unit copy">
-			<h3>Using the Pattern Library</h3>
+			<h2 class="padding-none">Using the Pattern Library</h2>
 		
 			<p>The pattern library is baked into pages in the University CMS, so just use the markup in your content. On other pages, include the pattern library style sheet on any page with the <code>&lt;link&gt;</code> element below and the use the appropriate <abbr title="HyperText Markup Language">HTML</abbr> element/class structure (as indicated in the examples). It should be the last stylesheet to load, if possible.</p>
 
-			<h4>A word on fonts</h4>
-
-			<p>The GVSU website uses webfonts for headings. If you are creating content for the CMS, your fonts will be fine. If you are building outside the CMS, you may need to add the webfonts and font <abbr title="Cascading Style Sheets">CSS</abbr> to the server you are working on. See the <a href="#lib-webfonts">Typography section</a> for more details.</p>
-
-			<div class="codeblock monospace">		
-<pre><code>
-&lt;link rel="stylesheet" type="text/css" href="http://gvsu.edu/cms3/assets/741ECAAE-BD54-A816-71DAF591D1D7955C/libui.css" /&gt;
-</code></pre>
-			</div><!-- End .codeblock .monospace -->
-			
-			<h4>Writing readable code</h4>
+			<h3>Writing readable code</h3>
 				<ul class="bullet-list">
 					<li>Use classes for <abbr title="Cascading Style Sheets">CSS</abbr> styles. Use ids for semantic purposes and for in-page navigation.</li>
-					<li>Alphabetize attributes within an element. For example: <code>&lt;div class="line" id="lib-access" title="Accessibility Information"&gt;</code>. The exception to this is the <code>&lt;a&gt;</code> element, which should start with the href attribute; alphabetize the attributes that follow.</li>
+					<li>Alphabetize attributes within an element. For example: <code>&lt;div class="row row-gutter" id="lib-access" title="Accessibility Information"&gt;</code>. The exception to this is the <code>&lt;a&gt;</code> element, which should start with the href attribute; alphabetize the attributes that follow.</li>
 					<li>Alphabetize multiple classes within the class attribute. For instance: <code>&lt;div class="accordion-body codeblock lib-button monospace"&gt;</code></li>
-					<li>It&#8217;s nice to follow <a href="http://www.w3schools.com/html/html_xhtml.asp">XHTML syntax</a>, but not required.</li>
 				</ul>
 				
 		
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line #lib-basics -->
 
-	<div class="line" id="lib-colors">
-		<div class="span1 unit">
+	<div class="row" id="lib-colors">
+		<div class="col-12">
 
-			<h3>Colors</h3>
+			<h1 class="padding-none h3">Colors</h1>
 
 			<!-- Grid of colors used on the website -->
 
-			<div class="line">
+			<div class="row row-gutter">
 
-				<div class="left span4 unit">
-					<p class="colorblock" style="background-color: #88B3DA; color: #363636;">#88B3DA</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock" style="background-color: #093a6d; color: #ffffff;">#093a6d</p>
 				</div>
 
-				<div class="left span4 unit">
-					<p class="colorblock" style="background-color: #0065A4; color: #fff;">#0065A4</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock" style="background-color: #0065a4; color: #fff;">#0065a4</p>
 				</div>
 
-				<div class="left span4 unit">
-					<p class="colorblock" style="background-color: #004875; color: #fff;">#004875</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock" style="background-color: #1b6ec2; color: #fff;">#1b6ec2</p>
 				</div>
 
-				<div class="left span4 unit">
-					<p class="colorblock"style="background-color: #363636; color: #fff;">#363636</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock"style="background-color: #383838; color: #fff;">#383838</p>
 				</div>
 
-				<div class="left span4 unit">
-					<p class="colorblock" style="background-color: #bbbbbb; color: #fff;">#BBBBBB</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock" style="background-color: #222222; color: #CECDCD;">#222222</p>
 				</div>
 
-				<div class="left span4 unit">
-					<p class="colorblock"style="background-color: #dedede; color: #363636;">#DEDEDE</p>
+				<div class="col-4 col-sm-12">
+					<p class="colorblock"style="background-color: #CECDCD; color: #363636;">#CECDCD</p>
 				</div>
 		
 			</div>
@@ -128,21 +240,21 @@
 		<p>And, of course, white (#FFFFFF).</p>
 	</div><!-- End .line#lib-colors -->
 
-	<div class="line" id="lib-grid">
-		<div class="span1 unit">
-			<h3>Grid Units</h3>
+	<div class="row row-gutter" id="lib-grid">
+		<div class="col-12">
+			<h1 class="padding-none h3">Grid Units</h1>
 
-			<p>The flexible grid that underlies the library website is based on Nicole Sullivan&#8217;s <a href="https://github.com/stubbornella/oocss/wiki/Grids"><abbr title="Object-Oriented Cascading Style Sheets">OOCSS</abbr></a> grid structure. Below are the ways how you can lay out content horizontally. (The colors are just for looks.) Please remember that the grid changes depending on screen size (resize this window to see how that works).</p>
+			<p>The flexible grid that underlies the library website is based on <a href="https://getbootstrap.com/docs/4.0/layout/grid/">the Bootstrap grid</a>. Below are some of the ways how you can lay out content horizontally. (The colors are just for looks.) Please remember that the grid changes depending on screen size (resize this window to see how that works).</p>
 
-			<p>To float items, use the classes .left and .right, depending on the direction you want.</p>
+			<p>The grid is based on 12 columns. The col-* class applies to viewports larger than 1000px. col-md-* is for viewports from about 760px to 1000px. And col-sm-* is for viewports smaller than 760px.</p>
 
-			<div class="lib-button-small-grey accordion-head">Sample Markup</div>
+			<div class="btn btn-default accordion-head">Sample Markup</div>
 
 			<div class="accordion-body codeblock monospace">
 	
 <pre><code>
-&lt;div class="line"&gt;
-	&lt;div class="left span4 unit"&gt;
+&lt;div class="row row-gutter"&gt;
+	&lt;div class="col-3 col-md-6 col-sm-12"&gt;
 		&lt;ul id="navigation"&gt;
 			&lt;li&gt;&lt;a href="/library/find" class="navparent"&gt;Find&lt;/a&gt;
 				&lt;ul&gt;
@@ -155,15 +267,15 @@
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/div&gt;
-	&lt;div class="left span4 unit"&gt;
-		&lt;h3&gt;Get Help with Citations&lt;/h3&gt;
+	&lt;div class="col-3 col-md-6 col-sm-12"&gt;
+		&lt;h1 class="padding-none h2"&gt;Get Help with Citations&lt;/h1&gt;
 	
 		&lt;div class="lib_help_video"&gt;
 				&lt;a href="http://www.slideshare.net/gvsulib/apa-9324354"&gt;Using APA Style&lt;/a&gt;&lt;br&gt;
 				&lt;a href="http://www.slideshare.net/gvsulib/apa-9324354"&gt;&lt;img alt="Using APA Style" src="/cms3/assets/741ECAAE-BD54-A816-71DAF591D1D7955C/apastyle.png"&gt;&lt;/a&gt;&lt;/div&gt;
 	&lt;/div&gt;
-	&lt;div class="lastUnit left .span2 unit"&gt;
-		&lt;h2&gt;Citation Tools&lt;/h2&gt;
+	&lt;div class="col-6 col-sm-12"&gt;
+		&lt;h1 class="padding-none h2"&gt;Citation Tools&lt;/h1&gt;
 	
 		&lt;p&gt;For help with how to cite sources or create a bibliography, visit <abbr title="Grand Valley State University">GVSU</abbr>&#8217;s Writing Center. We have a number of tools to help you track, organize, and cite sources in your research:&lt;/p&gt;
 	
@@ -176,87 +288,75 @@
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line #lib-grid -->
 
-	<div class="line">
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
-		<div class="left span4 unit"><p class="demogrid blue">.unit .span4</p></div>
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
-		<div class="left span4 unit"><p class="demogrid blue">.unit .span4</p></div>
+	<div class="row row-gutter">
+		<div class="col-3 col-md-6 col-sm-12"><p class="demogrid grey">.col-3 .col-md-6 .col-sm-12</p></div>
+		<div class="col-3 col-md-6 col-sm-12"><p class="demogrid blue">.col-3 .col-md-6 .col-sm-12</p></div>
+		<div class="col-3 col-md-6 col-sm-12"><p class="demogrid grey">.col-3 .col-md-6 .col-sm-12</p></div>
+		<div class="col-3 col-md-6 col-sm-12"><p class="demogrid blue">.col-3 .col-md-6 .col-sm-12</p></div>
 	</div>
 
-	<div class="line">
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
-		<div class="left span4 unit"><p class="demogrid blue">.unit .span4</p></div>
-		<div class="left span2 unit"><p class="demogrid grey">.unit .span2</p></div>
+
+	<div class="row row-gutter">
+		<div class="col-4 col-sm-12"><p class="demogrid grey">.col-4 .col-sm-12</p></div>
+		<div class="col-4 col-sm-12"><p class="demogrid blue">.col-4 .col-sm-12</p></div>
+		<div class="col-4 col-sm-12"><p class="demogrid grey">.col-4 .col-sm-12</p></div>
 	</div>
 
-	<div class="line">
-		<div class="left span2 unit"><p class="demogrid blue">.unit .span2</p></div>
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
-		<div class="left span4 unit"><p class="demogrid blue">.unit .span4</p></div>
+	<div class="row row-gutter">
+		<div class="col-3 col-sm-12"><p class="demogrid grey">.col-3 .col-sm-12</p></div>
+		<div class="col-3 col-sm-12"><p class="demogrid blue">.col-3 .col-sm-12</p></div>
+		<div class="col-6"><p class="demogrid grey">.col-6</p></div>
 	</div>
 
-	<div class="line">
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
-		<div class="left span3of4 unit"><p class="demogrid blue">.unit .span3of4</p></div>
+	<div class="row row-gutter">
+		<div class="col-6"><p class="demogrid blue">.col-6</p></div>
+		<div class="col-3 col-sm-12"><p class="demogrid grey">.col-3 .col-sm-12</p></div>
+		<div class="col-3 col-sm-12"><p class="demogrid blue">.col-3 .col-sm-12</p></div>
 	</div>
 
-	<div class="line">
-		<div class="left span3of4 unit"><p class="demogrid blue">.unit .span3of4</p></div>
-		<div class="left span4 unit"><p class="demogrid grey">.unit .span4</p></div>
+	<div class="row row-gutter">
+		<div class="col-3 col-sm-12"><p class="demogrid grey">.col-3 .col-sm-12</p></div>
+		<div class="col-9 col-sm-12"><p class="demogrid blue">.col-9 .col-sm-12</p></div>
 	</div>
 
-	<div class="line">
-		<div class="left span1 unit"><p class="demogrid blue">.unit .span1</p></div>
+	<div class="row row-gutter">
+		<div class="col-9 col-sm-12"><p class="demogrid blue">.col-9 .col-sm-12</p></div>
+		<div class="col-3 col-sm-12"><p class="demogrid grey">.col-3 .col-sm-12</p></div>
 	</div>
 
-	<div class="line" id="lib-access">
-		<div class="copy left span1 unit">
-			<h3>Accessibility</h3>
+	<div class="row row-gutter">
+		<div class="col-6 col-sm-12"><p class="demogrid blue">.col-6 .col-sm-12</p></div>
+		<div class="col-6 col-sm-12"><p class="demogrid grey">.col-6 .col-sm-12</p></div>
+	</div>
+
+	<div class="row row-gutter">
+		<div class="col-12"><p class="demogrid blue">.col-12</p></div>
+	</div>
+
+	<div class="clear">
+
+	<div class="row row-gutter" id="lib-access">
+		<div class="copy col-12">
+			<h1 class="padding-none h3">Accessibility</h1>
 		
-			<p>Use the following tips when writing <abbr title="HyperText Markup Language">HTML</abbr> to improve accessibility (as a federally funded institution, we must adhere to the <abbr title="Americans with Disabilities Act">ADA</abbr>).</p>
+			<p>See the <a href="https://www.gvsu.edu/library/styleguide">Content Style Guide</a> for information on creating accessible HTML and content.</p>
 		
-			<ul class="bullet-list">
-				<li>All images must have <a href="http://www.w3schools.com/tags/att_img_alt.asp">alt attributes</a>. Describe the image, don&#8217;t just repeat the filename.</li>
-				<li>For navigation items and forms, if possible, use the <a href="http://www.w3.org/TR/html4/interact/forms.html#h-17.11.1">tabindex attribute</a> to make it easy to navigate without a mouse.</p>
-				<li>Use the <a href="http://www.w3schools.com/tags/tag_abbr.asp"><code>&lt;abbr&gt;</code> element</a> for all abbreviations and acronyms!</li>
-				<li>All elements in forms should have a corresponding <code>&lt;label&gt;</code> (except submit buttons).</li>
-			</ul>
+			
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line #lib-access -->
 
-	<div class="line" id="lib-typography">
-		<div class="copy left span1 unit">
-			<h3>Typography</h3>
+	<div class="row row-gutter" id="lib-typography">
+		<div class="col-12">
+			<h1 class="padding-none h3">Typography</h1>
 
-			<p>Use standard <abbr title="HyperText Markup Language">HTML</abbr> elements without any inline styles. A few notes:</p>
-				<ol class="number-list">
-					<li>Don&#8217;t use <code>&lt;h1&gt;</code>.</li>
-					<li><code>&lt;h2&gt;</code> is reserved for the page title at the top of the #page-content div. Please do not repeat it.</li>
-					<li>When possible, please use typographically correct punctuation:
-						<ul class="bullet-list">
-							<li>Apostophe: &#8217; <code>&amp;#8217;</code></li>
-							<li>Single Quotes: &#8216;&nbsp;&#8217; <code>&amp;#8216; &amp;#8217;</code></li>
-							<li>Double Quotes: &#8220;&nbsp;&#8221; <code>&amp;#8220; &amp;#8221;</code></li>
-							<li>Em Dash: &#8212; <code>&amp;#8212;</code></li>
-							<li>En Dash: &#8211; <code>&amp;#8211;</code></li>
-							<li>Signify file types by wrapping the file extension in a span.ftype: <code>&lt;span class="ftype"&gt;&lt;abbr title="Portable Document Format"&gt;PDF&lt;/abbr&gt;&lt;/span&gt;</code></li>
-						</ul>
-					</li>
-				</ol>
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line #lib-typography -->
-
-	<div class="lib-button-small-grey accordion-head">Show Typographic Styles</div>
-
-	<div class="accordion-body aside">
+	<div class="row row-gutter">
+			<div class="col-3 col-md-6-col-sm-12">
 		
-		<div class="line">
-			<div class="copy left span4 unit">
-		
-				<h4>Headings:</h4>
+				<h2 class="h3">Headings:</h2>
 		
 				<hr />
-		
+				
+				<h1>This is an <code>&lt;h1&gt;</code></h1>
 				<h2>This is an <code>&lt;h2&gt;</code></h2>
 				<h3>This is an <code>&lt;h3&gt;</code></h3>	
 				<h4>This is an <code>&lt;h4&gt;</code></h4>
@@ -265,110 +365,82 @@
 
 			</div><!-- End .span4 .unit -->
 	
-			<div class="copy left span4 unit">
+			<div class="col-3 col-md-6-col-sm-12">
 		
-				<h4>Text Elements:</h4>
+				<h2 class="h3">Text Elements:</h2>
 		
 				<hr />
 		
 				<p>This is a paragraph (<code>&lt;p&gt;</code>), which has a readable line height and a nice font size. I enjoy reading words on a screen.</p>
 		
-				<blockquote><p>Here is a <code>&lt;blockquote&gt;</code>, where I&#8217;m citing something by someone else!</p><cite>Here is a <code>&lt;cite&gt; element</code></cite></blockquote>
 	
 			</div><!-- End .span4 .unit -->
 	
-			<div class="copy left span4 unit">
+			<div class="col-3 col-md-6-col-sm-12">
 		
-				<h4>Lists:</h4>
+				<h2 class="h3">Lists:</h2>
 
-					<p>Use the .copy class on an ordered, unordered, or definition list's container, since the reset styles strip out default styling on all lists.</p>
-		
 				<hr />
 		
-				<ul class="bullet-list">
-					<li>Here&#8217;s a <code>&lt;ul class="bullet-list"&gt;</code></li>
+				<ul>
+					<li>Here&#8217;s a <code>&lt;ul&gt;</code></li>
 					<li>There can be a bunch of lines.</li>
 				</ul>
 		
-				<ol class="number-list">
-					<li>Here&#8217;s a <code>&lt;ol class="number-list"&gt;</code></li>
+				<ol>
+					<li>Here&#8217;s a <code>&lt;ol&gt;</code></li>
 					<li>There can be a bunch of lines.</li>
 				</ol>
-		
-				<dl>
-					<dt>And a <code>&lt;dl&gt;</code>. This is a <code>&lt;dt&gt;</code></dt>
-						<dd><p>This is a definition. Oops, I mean a <code>&lt;dd&gt;</code>.</p></dd>
-						<dd><p>You can have more than one <code>&lt;dd&gt;</code>.</p></dd>
-					<dt>Oh here&#8217;s another term.</dt>
-						<dd><p>How many definitions are there? Sheesh.</p></dd>
-				</dl>
+				
 			</div><!-- End .span4 .unit -->
-			<div class="copy lastUnit left span4 unit">
+			<div class="col-3 col-md-6-col-sm-12">
 		
-				<h4>Styling:</h4>
+				<h2 class="h3">Styling:</h2>
 		
 				<hr />
 		
-				<p><strong>This is <code>&lt;strong&gt;</code> text.</strong> Use this to visually and semantically place strong emphasis on text.</p>
-		
-				<p><b>Use <code>&lt;b&gt;</code> if you just want to make the text bold.</b> It has no semantic value.</p>
-		
-				<p><em>This is <code>&lt;em&gt;</code> -phasized text.</em> It&#8217;s used for emphasizing text.</p>
-		
-				<p><i>Use <code>&lt;i&gt;</code> if you just want italics without any semantic value.</i></p>
-		
-				<p>Use a <code>&lt;span class="ftype"&gt;</code> to indicate a file type, such as <span class="ftype">PDF</span></p>
+				<p><strong>This is <code>&lt;strong&gt;</code> text.</strong> Use this to visually and semantically place strong emphasis on text. (Do not use <code>&lt;b&gt;</code></p>
+				
+				<p><em>This is <code>&lt;em&gt;</code> -phasized text.</em> It&#8217;s used for emphasizing text. (Do not use <code>&lt;i&gt;</code></p>
+				
 			</div><!-- End .span4 .unit -->
 		</div><!-- End .line -->
-	</div><!-- End .accordion-body .aside -->
+</div>
+</div>
 
-	<div class="line" id="lib-webfonts">
-		<div class="left span1 unit">
+<div class="row">
+	<div class="col-12">
+		<p>You can also style a <code>&lt;p&gt;</code> element or any heading level to look like any heading level. For instance, <code>&lt;h1 class="h2"&gt;</code> will semantically be an h1 but will look like an h2. Use the class <code>.padding-none</code> to remove padding from headings. Read more on <a href="https://getbootstrap.com/docs/4.0/content/typography/#headings">the Bootstrap documentation</a>.</p>
 
-			<h4>Adding Webfonts to your non-<abbr title="Content Management System">CMS</abbr> Page</h4>
+	</div>
+</div>
 
-			<p><abbr title="Grand Valley State University">GVSU</abbr> uses the web font Alternate Gothic 3 for many of its headings. If you are building a new page or site on a non-GVSU server, you'll need to include the font stylesheet and webfonts on the server.
 
-			<p>You should have the files for the web fonts. If not, ask <a href="mailto:reidsmam@gvsu.edu" title="Email Matthew to ask him for the webfonts">Matthew</a> for them.</p>
-
-			<p>Upload the fonts and the stylesheet to the same folder on the server your page will be on. Then update the path and include the following &lt;link&gt; element in the &lt;head&gt; of your page:</p>
-
-				<div class="codeblock monospace">
-
-<pre><code>&lt;link rel="stylesheet" type="text/css" href="PATH/TO/FONT/DIRECTORY/gvsu-fonts.css"&gt;</code></pre>
-
-				</div><!-- End .codeblock.monospace -->
-
-		</div><!-- End .span1.unit -->
-	</div><!-- End .line -->
-
-	<div class="line" id="lib-forms">
-		<div class="copy left span1 unit">
-			
-			<h3>Forms</h3>
+	<div class="row row-gutter" id="lib-forms">
+		<div class="col-12">
+			<h1 class="padding-none h3">Forms</h1>
 
 				<p>Forms are the backbone of the library website. Every system that our users have to create an account with or input data into is a potential place we will lose them. Make them simple. <strong>Never</strong> use Clear or Reset buttons. They confuse users and lead to errors.</p>
 
-				<div class="accordion-head lib-button-small-grey">Sample Markup</div>
+				<div class="accordion-head btn btn-default">Sample Markup</div>
 
 				<div class="accordion-body codeblock monospace">
 
 <pre><code>
-&lt;div class="lib-form"&gt;
 	&lt;form action="" method="post" name="my-form"&gt;
 		&lt;input name="hidden-field" type="hidden" value="Secret" /&gt;
 	
-		&lt;div class="line"&gt;
-			&lt;div class="left span2 unit"&gt;
-				&lt;label for="name"&gt;Name&lt;/label&gt;
-				&lt;input name="name" type="text" /&gt;
+		&lt;div class="row row-gutter"&gt;
+			&lt;div class="col-6 col-sm-12"&gt;
+				&lt;label for="name"&gt;Name&lt;/label&gt; 
+				&lt;input name="name" id="name" type="text" /&gt;
 			&lt;/div&gt;
-			&lt;div class="left span4 unit"&gt;
-				&lt;input name="awesomeness" type="checkbox" /&gt; &lt;label class="lib-inline" for="awesomeness"&gt;Are you awesome?&lt;/label&gt;
+			&lt;div class="col-3 col-sm-12"&gt;
+				&lt;input name="awesomeness" id="awesomeness" type="checkbox" /&gt; &lt;label for="awesomeness"&gt;Are you awesome?&lt;/label&gt;
 			&lt;/div&gt;
-			&lt;div class="lastUnit left span4 unit "&gt;
-				&lt;label class="lib-inline"&gt;Your favorite food:&lt;/label&gt;
-				&lt;select name="favorite-food"&gt;
+			&lt;div class="col-3 col-sm-12"&gt;
+				&lt;label for="favorite-food"&gt;Your favorite food:&lt;/label&gt;
+				&lt;select name="favorite-food" id="favorite-food"&gt;
 					&lt;option value="#"&gt;----------&lt;/option&gt;
 					&lt;optgroup label="Meats"&gt;
 						&lt;option value="Chicken"&gt;Chicken&lt;/option&gt;
@@ -382,54 +454,72 @@
 					&lt;/optgroup&gt;
 				&lt;/select&gt;
 			
-				&lt;input class="lib-button" name="submit" type="submit" value="Submit" /&gt;
+				&lt;input class="btn btn-primary" name="submit" type="submit" value="Submit" /&gt;
 			&lt;/div&gt;	
 		&lt;/div&gt;
 	&lt;/form&gt;	
-&lt;/div&gt;
 
-&lt;div class="lib-form"&gt;
+
+
 	&lt;form action="" method="get" name="search-form"&gt;
-		&lt;input name="search" type="text" /&gt;
-		&lt;input class="lib-button" name="find" type="submit" value="Find it" /&gt;
+	    /* .sr-only class hides label from sighted users, reads for screen readers */
+	    &lt;label for="search" class="sr-only"&gt;Search our collection<&lt;/label&gt;
+
+	    /* Use only in conjunction with placeholder for sighted users */
+		&lt;input name="search" id="search" type="text" placeholder="Search our collection" /&gt;
+		&lt;input class="btn btn-primary" name="find" type="submit" value="Find it" /&gt;
 	&lt;/form&gt;
-&lt;/div&gt;
+
 </code></pre>
 		
 				</div><!-- End .accordion-body .codeblock .monospace -->
 
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line #lib-form -->
-	
-	<div class="line lib-form">
-		<div class="left span1 unit">
+	<form><fieldset>
+		<legend>Simple Form</legend>
+	<div class="row row-gutter">
+		<div class="col-12">
 			<label>This is a <code>&lt;Label&gt;</code></label>
 			<input type="text" placeholder="Text field" />
 		</div>
 	</div>
-
-	<div class="line lib-form">
-		<div class="left span2 unit">
+	<div class="clear"><p>&nbsp;</p></div>
+</fieldset>
+<fieldset>
+	<legend>Complex Forms</legend>
+	<div class="row row-gutter">
+		<div class="col-3 col-md-6 col-sm-12">
 			<label>If you need to span multiple</label>
 			<input type="text" />
 		</div>
 	
-		<div class="left span2 unit ">
+		<div class="col-3 col-md-6 col-sm-12">
 			<label>columns use grid units</label>
+			<input type="text" />
+		</div>
+
+		<div class="col-3 col-md-6 col-sm-12">
+			<label>and wrap like items</label>
+			<input type="text" />
+		</div>
+
+		<div class="col-3 col-md-6 col-sm-12">
+			<label>in a fieldset</label>
 			<input type="text" />
 		</div>
 	</div>
 
-	<div class="line lib-form">
-		<div class="span1 unit">
+	<div class="row-gutter">
+		<div class="col-12">
 			<label>Textarea</label>
-			<textarea></textarea>
+			<textarea style="width:100%;"></textarea>
 		</div>
 	</div>
 
-	<div class="line lib-form">
-		<div class="left span4 unit">
-			<h4>Checkboxes</h4>
+	<div class="row-gutter">
+		<div class="col-3 col-md-6 col-sm-12">
+			<h2 class="h3">Checkboxes</h2>
 		
 				<input type="checkbox" /> <label class="lib-inline">label.lib-inline</label><br />
 				<input type="checkbox" /> <label class="lib-inline">Option 2</label><br />
@@ -438,8 +528,8 @@
 				<input type="checkbox" /> <label class="lib-inline">Option 5</label><br />
 		</div><!-- End .span4 .unit -->
 	
-		<div class="left span4 unit">
-			<h4>Radio Buttons</h4>
+		<div class="col-3 col-md-6 col-sm-12">
+			<h2 class="h3">Radio Buttons</h2>
 		
 				<input type="radio" /> <label class="lib-inline">Option 1</label><br />
 				<input type="radio" /> <label class="lib-inline">Option 2</label><br />
@@ -448,8 +538,8 @@
 				<input type="radio" /> <label class="lib-inline">Option 5</label><br />
 		</div><!-- End .span4 .unit -->
 	
-		<div class="left span4 unit">
-			<h4>Select Menus</h4>
+		<div class="col-3 col-md-6 col-sm-12">
+			<h2 class="h3">Select Menus</h2>
 		
 				<label class="lib-inline">Choose One:</label>&nbsp;
 				<select>
@@ -467,393 +557,74 @@
 				</select>
 		</div><!-- End .span4 .unit -->
 	
-		<div class="left span4 unit ">
-			<h4>Notes</h4>
+		<div class="col-3 col-md-6 col-sm-12">
+			<h2 class="h3">Notes</h2>
 		
-				<p>Use placeholders with text fields if you cannot have a label, but do not supply examples as placeholders. Instead, use the label as the placeholder. Still include a label in the markup but use javascript or CSS to hide it. (<a href="http://matthew.reidsrow.com/articles/14">Read more about this</a>.)</p>
-				<p>Also, use columns when possible to make forms appear shorter. Make sure to <a href="#lib-access">use tabindexes</a> as well.</p>
+				<p>Use placeholders with text fields if you cannot have a label, but do not supply examples as placeholders. Instead, use the label as the placeholder. Still include a label in the markup but use the <code>.sr-only</code> class to hide it from sighted users.</p>
+				<p>Also, use columns when possible to make forms appear shorter.</p>
+
 		</div><!-- .End .span4 .unit -->
+
 	</div><!-- End .line -->
-
-	<div class="line" id="lib-simple-form">
-		<div class="span1 unit">
-			<h4>Simple Forms</h4>
-
-			<p>When a single text input and a single submit button are all you need for a form, use the .lib-simple-form pattern. If you need a select box, a text input, and a submit, use the .lib-book-form pattern. (We use these on our "Find Articles" and "Find Books" pages, for instance.) Use the grid patterns to make layout work for your implementation.</p>
-
-			<hr />
-
-			<form class="lib-simple-form">
-				<div class="line">
-					<div class="left span2of3 unit">
-						<input readonly="readonly" style="border: 1px solid #bbb;" type="text" value="form.lib-simple-form" />
-					</div>
-					<div class="lastUnit left span3 unit">
-						<input class="lib-button-wide" type="submit" value="Find It" />
-					</div>
-				</div>
-			</form>
-
-			<hr />
-
-			<form class="lib-book-form">
-				<div class="line">
-					<div class="left span2of3 unit">
-						<select name="searchtype">
-							<option selected="selected" value="X">Keyword</option>
-							<option value="t">Title</option>
-							<option value="a">Author</option>
-							<option value="c">Call No.</option>
-							<option value="i">ISBN</option>
-							<option value="d">Subject</option>
-							<option value="g">Gov. Doc. No.</option>
-						</select>
-						<input readonly="readonly" style="border: 1px solid #bbb;" type="text" value="form.lib-book-form" />
-					</div>
-					<div class="lastUnit left span3 unit">
-						<input class="lib-button-wide" type="submit" value="Find It" />
-					</div>
-				</div>
-			</form>
-
-			<div class="accordion-head lib-button-small-grey">Sample Markup</div>
-
-				<div class="accordion-body codeblock monospace">
-
-<pre><code>
-&lt;form class="lib-simple-form"&gt;
-	&lt;div class="line"&gt;
-		&lt;div class="left span2of3 unit"&gt;
-			&lt;input readonly="readonly" style="border: 1px solid #bbb;" type="text" value="form.lib-simple-form" /&gt;
-		&lt;/div&gt;
-		&lt;div class="lastUnit left span3 unit"&gt;
-			&lt;input class="lib-button-wide" type="submit" value="Find It" /&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/form&gt;
-</code></pre>
-
-				</div>
-		</div>
-	</div>
-
-	<div class="line" id="lib-buttons">
-		<div class="left span1 unit">
-			<h3 id="lib-buttons">Buttons</h3>
-
-			<p>The button classes <code>.lib-button*</code> and <code>.lib-button-small*</code> can be applied to <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, and <code>&lt;input type="submit"&gt;</code>s. Buttons that make a server request (submit buttons, links to new pages) should all get blue buttons <code>.lib-button</code> or <code>.lib-button-small</code>. Buttons that trigger actions within a page (accordions etc.) should get the grey buttons (<code>.lib-button-grey</code> or <code>.lib-button-small-grey</code>). When you have two buttons, make the preferred button blue.</p>
+</fieldset>
+</form>
 	
-			<div class="accordion-head lib-button-small-grey">Sample Markup</div>
+
+	<div class="row row-gutter" id="lib-buttons">
+		<div class="col-12">
+			<h1 class="padding-none h3">Buttons</h1>
+
+			<p>The button classes <code>.btn</code> must be applied to all buttons. You can customize buttons with the following classes:</p>
+
+			<ul>
+				<li>Use <code>.btn-sm</code> to make the button smaller</li>
+				<li>Use <code>.btn-primary</code> to make the button blue. Use this only for actions that take you to a new page (like orm submission, etc.)</li>
+				<li>Use <code>.btn-default</code> to make the button gray. Use this for buttons that trigger action on the page.</li>
+				<li>Read more about buttons at <a href="https://getbootstrap.com/docs/4.0/components/buttons/">the Bootstrap documentation</a>.</li>
+			</ul>
+	
+			<div class="accordion-head btn btn-default">Sample Markup</div>
 
 			<div class="accordion-body codeblock monospace">
 		
 	<pre><code>			
-	&lt;input class="lib-button" name="post" type="submit" value="Find It" /&gt;
+	&lt;input class="btn btn-primary" name="post" type="submit" value="Find It" /&gt;
 	</code></pre>
 		
 			</div><!-- End .accordion-body .codeblock .monospace -->
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line #lib-buttons -->
 	
-	<div class="line">
-		<div class="left span2 unit">
-			<span class="lib-button-small">.lib-button-small</span>
-			<span class="lib-button-small-grey">.lib-button-small-grey</span>
+	<div class="row row-gutter">
+		<div class="col-6 col-sm-12">
+			<span class="btn btn-sm btn-primary">.btn .btn-sm .btn-primary</span>
+			<span class="btn btn-sm btn-default">.btn .btn-sm .btn-default</span>
 		</div>
 
-		<div class="left span2 unit">
-			<span class="lib-button">.lib-button</span>
-			<span class="lib-button-grey">.lib-button-grey</span>
+		<div class="col-6 col-sm-12">
+			<span class="btn btn-primary">.btn .btn-primary</span>
+			<span class="btn btn-default">.btn .btn-default</span>
 		</div>
 	</div><!-- End .line -->
 
-	<p>Use this class when you want a submit button to be the width of the viewport on small screens, but enclose it in a grid column so that it sizes properly on larger screens.</p>
-
-	<div class="line">
 	
-		<div class="span4 unit">
-			<span class="lib-button-wide">.lib-button-wide</span>
-		</div>
+	<div class="row row-gutter" id="lib-status-messages">
+		<div class="col-12">
 
-	</div>
-	
-	<div class="line" id="lib-navigation-elements">
-		<div class="span1 unit">
-			
-			<h3>Tabs &amp; Navigation Elements</h3>
+			<h1 class="padding-none h3">Status Messages</h1>
 
-				<div class="copy">
-					<p>Tabs should be used for between-page navigation, such as giving different views of the same data (e.g. the database A-Z/Subject lists). Use the floated list to navigate within a page. Use the alphabetical navigation list only when you have a lot of data, to speed navigation. </p>
-				</div>
-			
-				<h4>Horizontal List</h4>
-			
-					<div class="lib-horizontal-list">
-						<ul>
-							<li>.lib-horizontal-list</li>
-							<li><a href="#">First Link</a></li>
-							<li><a href="#">Second Link</a></li>
-							<li><a href="">Third Link etc...</a></li>
-						</ul>
-					</div>
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-			
-	<div class="line">
-		<div class="span1 unit">
-			<div class="accordion-head clear lib-button-small-grey">Sample Markup</div>
-
-			<div class="accordion-body codeblock monospace">
-
-<pre><code>
-&lt;div class="lib-horizontal-list"&gt;
-	&lt;ul&gt;
-		&lt;li&gt;Choose One:&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;First Option&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Second Option&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-
-			</div><!-- End .accordion-body .codeblock .monospace -->
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-				
-	<div class="line">
-		<div class="span1 unit">			
-			<h4>Tabs</h4>
-
-				<p>Wrap non-essential text in spans within the tab links to hide from smaller screens.</p>
-			
-				<div class="lib-tabs">
-					<ul>
-						<li class="active"><a href="#">.lib-tabs ul li.active</a></li>
-						<li><a href="#">.lib-tabs ul li</a></li>
-						<li><a href="#"><span>A Very, Very </span>Long Title</a></li>
-					</ul>
-				</div>
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-	
-	<div class="line">
-		<div class="span1 unit">
-			<div class="accordion-head clear lib-button-small-grey">Sample Markup</div>
-
-			<div class="accordion-body codeblock monospace">
-
-<pre><code>
-&lt;div class="lib-tabs"&gt;
-	&lt;ul&gt;
-		&lt;li class="active"&gt;&lt;a href="#"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-			</div><!-- End .accordion-body .codeblock .monospace -->
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-	
-	<div class="line">
-		<div class="span1 unit">		
-			<h4>Alphabetic Navigation</h4>
+				<p>Success, warning, and error messages give feedback to the user. You can read more at <a href="https://getbootstrap.com/docs/4.0/components/alerts/">the Bootstrap documentation.</a></p>
 		
-				<div class="lib-letter">
-					<ul>
-						<li><a href="#">A</a></li>
-						<li><a href="#">B</a></li>
-						<li><a href="#">C</a></li>
-						<li><a href="#">D</a></li>
-						<li><a href="#">E</a></li>
-						<li><a href="#">F</a></li>
-						<li><a href="#">G</a></li>
-						<li><a href="#">H</a></li>
-						<li><a href="#">I</a></li>
-						<li><a href="#">J</a></li>
-						<li><a href="#">K</a></li>											
-					</ul>
-				</div>
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-		
-	<div class="line">
-		<div class="span1 unit">	
-			<div class="accordion-head clear lib-button-small-grey ">Sample Markup</div>
-
-			<div class="accordion-body codeblock monospace">
-
-<pre><code>
-&lt;div class="lib-letter"&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href="#"&gt;A&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;B&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;C&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;D&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;E&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;F&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;G&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;H&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;I&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;J&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#"&gt;K&lt;/a&gt;&lt;/li&gt;											
-	&lt;/ul&gt;
-&lt;/div&gt;
-</code></pre>
-
-			</div><!-- End .accordion-body .codeblock .monospace -->
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line #lib-navigation-elements -->
-
-	<div class="line" id="lib-tables">
-		<div class="span1 unit copy">
-	
-			<h3>Tables</h3>
-	
-				<p>Please don&#8217;t use tables for layout. Puppies die when you do that. If you can&#8217;t avoid using tables (for instance, for tabular data!), use inline media queries to hide non-essential columns on smaller screens, depending on your table's content.</p>
-	
-				<div class="lib-button-small-grey accordion-head">Sample Markup</div>
-
-				<div class="accordion-body codeblock monospace">
-
-<pre><code>
-&lt;style&gt;
-.col2 { display: none; }
-@media screen and (min-width: 45em) { .col2 { display: table-cell; }}
-&lt;/style&gt;
-&lt;div class="lib-table"&gt;
-	&lt;table&gt;	
-		&lt;thead&gt;
-			&lt;tr&gt;
-				&lt;th colspan="3"&gt;div.lib-table table&lt;/th&gt;
-			&lt;/tr&gt;
-			&lt;tr class="lib-row-headings"&gt;
-				&lt;th&gt;tr.lib-row-headings th&lt;/th&gt;
-				&lt;th class="col2&gt;Column 2&lt;/th&gt;
-				&lt;th&gt;Column 3&lt;/th&gt;
-			&lt;/tr&gt;
-		&lt;/thead&gt;
-		&lt;tbody&gt;
-			&lt;tr&gt;
-				&lt;td&gt;One&lt;/td&gt;
-				&lt;td class="col2"&gt;One&lt;/td&gt;
-				&lt;td&gt;One&lt;/td&gt;
-
-			&lt;/tr&gt;
-			&lt;tr&gt;
-				&lt;td&gt;Two&lt;/td&gt;
-				&lt;td class="col2"&gt;Two&lt;/td&gt;
-				&lt;td&gt;Two&lt;/td&gt;
-
-			&lt;/tr&gt;
-		&lt;/tbody&gt;
-	&lt;/table&gt;
-&lt;/div&gt;
-</code></pre>
-
-				</div><!-- End .accordion-body .codeblock .monospace -->
-		
-				<div class="lib-table">
-					<style>
-					.col2 { display: none;}
-					@media screen and (min-width: 45em) { .col2 {display: table-cell;}}
-					</style>
-					<table>	
-						<thead>
-							<tr>
-								<th colspan="3">div.lib-table table</th>
-							</tr>
-							<tr class="lib-row-headings">
-								<th>tr.lib-row-headings th</th>
-								<th class="col2">Non-Essential Data</th>
-								<th>Essentail Data</th>
-							</tr>
-						</thead>
-			
-						<tbody>
-							<tr>
-								<td>One</td>
-								<td class="col2">One</td>
-								<td>One</td>
-					
-							</tr>
-							<tr>
-								<td>Two</td>
-								<td class="col2">Two</td>
-								<td>Two</td>
-					
-							</tr>
-							<tr>
-								<td>Three</td>
-								<td class="col2">Three</td>
-								<td>Three</td>
-							</tr>
-							<tr>
-								<td>Four</td>
-								<td class="col2">Four</td>
-								<td>Four</td>
-							</tr>
-							<tr>
-								<td>Five</td>
-								<td class="col2">Five</td>
-								<td>Five</td>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- End .lib-table -->
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-
-	
-
-	<div class="line">
-		<div class="span1 unit">
-
-			<h3 id="lib-icons">Icons</h3>
-		
-				<p>We use a series of icons throughout the site to signify common actions. If used as images, the alt attribute should match the action rather than describe the image. You can move these to another server if needed to avoid secure protocol issues with fussy browsers.</p>
-		
-				<div class="lib-horizontal-list">
-					<ul>
-						<li><img src="http://gvsu.edu/icon/pencil.png" alt="Edit" /> <a href="http://gvsu.edu/icon/pencil.png">Edit</a></li>
-						<li><img src="http://gvsu.edu/icon/delete.png" alt="Delete" /> <a href="http://gvsu.edu/icon/delete.png">Delete</a></li>
-						<li><img src="http://gvsu.edu/icon/add.png" alt="Add" /> <a href="http://gvsu.edu/icon/add.png">Add</a></li>
-						<li><img src="http://gvsu.edu/icon/help.png" alt="Help" /> <a href="http://gvsu.edu/icon/help.png">Help</a></li>	
-					</ul>
-				</div>
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-
-	<div class="line">
-		<div class="span1 unit">
-			<div class="accordion-head lib-button-small-grey">Sample Markup</div>
-
-			<div class="accordion-body codeblock monospace">
-
-	<pre><code>
-	&lt;img src="http://gvsu.edu/icons/pencil.png" alt="Edit" /&gt;
-	</code></pre>
-			
-			</div><!-- End .accordion-body .codeblock .monospace -->
-		</div><!-- End .span1 .unit -->
-	</div><!-- End .line -->
-
-	<div class="line" id="lib-status-messages">
-		<div class="span1 unit">
-
-			<h3>Status Messages</h3>
-
-				<p>Success, warning, and error messages give feedback to the user.</p>
-		
-				<div class="lib-button-small-grey accordion-head">Sample Markup</div>
+				<div class="btn btn-default accordion-head">Sample Markup</div>
 
 				<div class="accordion-body codeblock monospace">
 
 	<pre><code>
-	&lt;div class="lib-alert"&gt;
+	&lt;div class="alert alert-danger"&gt;
 		&lt;p&gt;The library is closed due to the weather. Please check the &lt;abbr title="Grand Valley State University"&gt;GVSU&lt;/abbr&gt; weather hotline for updates, and we'll reopen as soon as we can dig the door out.&lt;/p&gt;
 	&lt;/div&gt;
 
-	&lt;div class="lib-success"&gt;
+	&lt;div class="alert alert-success"&gt;
 		&lt;p&gt;All right! Your Document Delivery request has been placed. We'll let you know as soon as it arrives.&lt;/p&gt;
 	&lt;/div&gt;
 	</code></pre>
@@ -861,13 +632,13 @@
 				</div><!-- End .accordion-body .codeblock .monospace -->
 		
 		
-				<div class="lib-note"><strong>.lib-note</strong> Just a little information we want to highlight. This might include <a href="#">a link</a>.</div>
+				<div class="alert alert-info"><strong>.alert .alert-info</strong> Just a little information we want to highlight. This might include <a href="#">a link</a>.</div>
 		
-				<div class="lib-success"><strong>.lib-success</strong> Something went well, like a request was placed or the user won the lotto. This might include <a href="#">a link</a>.</div>
+				<div class="alert alert-success"><strong>.alert .alert-success</strong> Something went well, like a request was placed or the user won the lotto. This might include <a href="#">a link</a>.</div>
 		
-				<div class="lib-alert"><strong>.lib-alert</strong> We want to tell the user something important, like the library is closed or the ASRS is down. This might include <a href="#">a link</a>.</div>
+				<div class="alert alert-warning"><strong>.alert .alert-warning</strong> We want to tell the user something important, like the library is closed or the ASRS is down. This might include <a href="#">a link</a>.</div>
 		
-				<div class="lib-error"><strong>.lib-error</strong> Something has gone horribly wrong. This might include <a href="#">a link</a>.</div>
+				<div class="alert alert-danger"><strong>.alert .alert-danger</strong> Something has gone horribly wrong. This might include <a href="#">a link</a>.</div>
 		
 		</div><!-- End .span1 .unit -->
 	</div><!-- End .line -->
@@ -876,7 +647,7 @@
 
 <h3 id="lib-microcopy">Microcopy Examples</h3>
 
-	<div class="line">
+	<div class="row row-gutter">
 		<div class="span1 unit">
 			
 			<p>Use these examples as a way to phrase Tweets, chat responses, or short snippets of copy on the GVSU Library website. (See the Mary Idema Pew voice and tone document for tips on the /newbuilding website.) Some tips:</p>
@@ -892,18 +663,160 @@
 			
 		</div>
 	</div-->
-	
-	<footer>
-		<div class="line">
-			<div class="span1 unit">
+
+	<div class="clear row">
+			<div class="col-12">
 				<hr />
 				
-				<p>A <a href="http://gvsu.edu/library/labs"><abbr title="Grand Valley State University">GVSU</abbr> Library Labs</a> project. Written by <a href="http://matthewreidsma.com">Matthew Reidsma</a>, 2012. Released under the <a href="http://www.gnu.org/copyleft/gpl.html"><abbr title="Gnu Public License">GPL</abbr></a>. Source code available on <a href="https://github.com/gvsulib/UI-Patterns">Github</a>.</p>
+				<p>A <a href="https://www.gvsu.edu/library/labs"><abbr title="Grand Valley State University">GVSU</abbr> Library Labs</a> project. Written by <a href="https://matthewreidsma.com">Matthew Reidsma</a>, 2018. Released under the <a href="http://www.gnu.org/copyleft/gpl.html"><abbr title="Gnu Public License">GPL</abbr></a>. Source code available on <a href="https://github.com/gvsulib/UI-Patterns">Github</a>.</p>
 			</div>
 		</div>
-	</footer>
 
-<script src="js/jquery.min.js"></script>
+	<div class="clear hide-sm"></div>
+					<div class="hide-print">
+				<br>
+				<hr>
+				
+			<div class="row">
+				<div class="col-6">
+					
+						
+				</div>
+				<div class="col-6 text-right">
+					
+						<a href="https://prod.library.gvsu.edu/status/?problem" class="cms-report-problem" id="problem-link">Report a problem with this page</a>
+					
+				</div>
+			</div>
+		
+			</div>
+							<script>
+								var thisUrl = encodeURI(window.location);
+								document.getElementById('problem-link').href = 'https://prod.library.gvsu.edu/status/?problem&url=' + thisUrl;
+							</script> 
+
+			</div>
+	</div>
+</div>
+
+	<div role="contentinfo">
+			
+				<div class="footer hide-print">
+					<div class="content">
+						<h1 class="sr-only">Footer</h1>
+						<div class="row-gutter">
+							
+								<div class="col-3 col-md-4 col-sm-6">
+									<h2 class="padding-none color-white">
+										Contact
+									</h2>
+									
+											<p class="vcard">
+												
+														<span class="tel">
+															<span class="value">
+																<a href="tel:616-331-3500">(616) 331-3500</a>
+															</span>
+															
+														</span>
+														<br>
+													
+														<a href="mailto:library@gvsu.edu" class="email">library@gvsu.edu</a>
+														<br>
+													
+											</p>
+											
+												<br>
+											
+											<p class="vcard">
+												
+														<span class="fn">Text Us!</span>
+														<br>
+													
+														<span class="tel">
+															<span class="value">
+																<a href="sms:616-818-0219">(616) 818-0219</a>
+															</span>
+															
+														</span>
+														<br>
+													
+											</p>
+											
+								</div>
+							
+								<div class="col-3 col-md-4 col-sm-6">
+									<h2 class="padding-none color-white">
+										Social Media
+									</h2>
+									
+											<p>
+												
+													<a href="https://twitter.com/gvsulib" title="Twitter" class="text-nodecoration" target="_blank">
+														<img src="https://prod.library.gvsu.edu/labs/cms4.1_files/twitter.png" alt="" style="width:auto;min-width:auto;" />
+														<span class="sr-only">https://twitter.com/gvsulib</span>
+													</a>
+												
+													<a href="https://youtube.com/user/gvsulib" title="YouTube" class="text-nodecoration" target="_blank">
+														<img src="https://prod.library.gvsu.edu/labs/cms4.1_files/youtube.png" alt="" style="width:auto;min-width:auto;" />
+														<span class="sr-only">https://youtube.com/user/gvsulib</span>
+													</a>
+												
+													<a href="https://instagram.com/gvsulib" title="Instagram" class="text-nodecoration" target="_blank">
+														<img src="https://prod.library.gvsu.edu/labs/cms4.1_files/instagram.png" alt="" style="width:auto;min-width:auto;" />
+														<span class="sr-only">https://instagram.com/gvsulib</span>
+													</a>
+												
+											</p>
+											
+										<br class="hide-lg hide-md">
+									
+								</div>
+							
+							<div class="col-3 col-md-4 col-sm-6">
+								<h2 class="padding-none color-white">
+									Committed to Equality
+								</h2>
+								<a href="https://gvsu.edu/library/acrl" target="_blank">
+									<img src="https://www.gvsu.edu/cms4/asset/0862059E-9024-5893-1B5AAAC2F83BDDD8/acrl.png" alt="ACRL Diversity Alliance Logo" style="width:auto;max-width:100%;">
+								</a>
+							</div>
+							<div class="col-3 col-md-4 col-sm-6">
+								<h2 class="padding-none color-white">
+									Federal Depository Library Program
+								</h2>
+								<a href="https://gvsu.edu/library/govdoc" target="_blank">
+									<img src="https://www.gvsu.edu/cms4/asset/0862059E-9024-5893-1B5AAAC2F83BDDD8/fdlp-new.png" alt="Federal Depository Library Program Logo" style="width:auto;max-width:100%;">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom hide-print">
+		<div class="content">
+			<div class="row-gutter">
+				<div class="col-12 legal">
+					<h2 class="sr-only">Legal</h2>
+					<ul>
+						<li>
+							<a href="https://gvsu.edu/affirmativeactionstatement.htm"><span class="hide-sm hide-md">GVSU is an </span>AA/EO Institution</a>
+						</li>
+						<li>
+							<a href="https://gvsu.edu/privacystatement.htm">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="https://gvsu.edu/disclosures">Disclosures</a>
+						</li>
+						<li>
+							<span class="hide-sm hide-md">Copyright </span>© 2018 GVSU
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://prod.library.gvsu.edu/labs/chatbutton/chatbutton.js"></script>
 <script>
 $(document).ready(function() {
 	
@@ -916,8 +829,8 @@ $(document).ready(function() {
 });
 
 </script>
-
 </body>
 </html>
+
 
 
