@@ -34,7 +34,8 @@
 	@media screen and (min-width: 900px) {
 	.colorblock{padding:3em 0;}
 	}
-
+	ul.list-inline {list-style: none;margin-left: 0 !important;}
+	ul.list-inline li {display:  inline-block;margin-right: .5em;}
 
 	</style>
 </head>
@@ -186,7 +187,7 @@
 	</div><!-- End .row -->
 
 	<div class="row row-gutter" id="lib-basics">
-		<div class="span1 unit copy">
+		<div class="col-12">
 			<h2 class="padding-none">Using the Pattern Library</h2>
 		
 			<p>The pattern library is baked into pages in the University CMS, so just use the markup in your content. On other pages, include the pattern library style sheet on any page with the <code>&lt;link&gt;</code> element below and the use the appropriate <abbr title="HyperText Markup Language">HTML</abbr> element/class structure (as indicated in the examples). It should be the last stylesheet to load, if possible.</p>
